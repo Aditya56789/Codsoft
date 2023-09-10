@@ -1,0 +1,57 @@
+ #include<iostream.h>
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{   vector<int> a;
+    vector<string > h;
+    vector<string> t;
+     int n;
+     cout<<"How many task you want to add";
+     cin>>n;
+     for(int i=1;i<=n;i++)
+     {
+        a.push_back(i);
+        string task;
+        cout<<"Enter your task :-";
+        cin>>task;
+        h.push_back(task);
+        string status;
+        cout<<"Enter your status(completed or not ):- ";
+        cin>>status;
+        t.push_back(status);
+
+     }
+     harsh:
+     string view;
+     cout<<"Want you want (show,update)";
+     cin>>view;
+       if(view=="show")
+       {
+     for(int i=0;i<n;i++)
+     {
+          cout<<a[i]<<"   "<<h[i]<<"    "<<t[i]<<endl<<endl;
+          
+          
+
+     }
+
+       }   
+       else if(view=="update")
+       { string q="completed";
+           cout<<"On what serial number task is completed";
+           int u;
+           cin>>u;
+      //     n=2; 
+            for(int i=0;i<n;i++)
+
+            {
+                if(i==u)
+                {
+                    t[u]=q;
+                     
+                }
+            }
+            goto harsh;
+       }
+}
